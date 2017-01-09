@@ -2,8 +2,8 @@ import React from 'react';
 
 class App extends React.Component {
 	
-	constructor(props) {
-      super(props);
+	constructor() {
+      super();
 		
       this.state = {
          data: {
@@ -29,8 +29,11 @@ class App extends React.Component {
       return (
          <div>
 			<h1>User Details</h1>
-			<Content myDataProp = {this.state.data} 
-               updateStateProp = {this.updateState}></Content>
+			First Name:
+			<input type = "text" value = {this.state.data.firstName} />
+			Last Name:
+			<input type = "text" value = {this.state.data.lastName} />
+			<button onClick = {this.updateState}>GetNames</button>
          </div>
       );
    }
@@ -41,22 +44,9 @@ class Content extends React.Component {
    render() {
       return (
          <div>
-			<input type = "text" value = {this.props.myDataProp.firstName} />
-			<input type = "text" value = {this.props.myDataProp.lastName} />
-			<button onClick = {this.props.updateStateProp}>GetName</button>
+
          </div>
       );
-   }
-}
-
-App.propTypes = {
-   myDataProp: React.PropTypes.object.isRequired,
-}
-
-App.defaultProps = {
-   myDataProp: {
-      firstName:"first name of user",
-	  lastName:"last name of user"
    }
 }
 
