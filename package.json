@@ -4,7 +4,7 @@
   "description": "My React Application",
   "main": "index.js",
   "scripts": {
-   "build": "NODE_ENV=production  webpack --config webpack.config.js -p"
+   "build": "webpack -p"
   },
   "author": "Bakkiavathy Ezhumalai",
   "license": "ISC",
