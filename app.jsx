@@ -39,15 +39,15 @@ class App extends React.Component {
    }
 }
 
-class Content extends React.Component {
+// class Content extends React.Component {
 
-   render() {
-      return (
-         <div>
+//    render() {
+//       return (
+//          <div>
 
-         </div>
-      );
-   }
-}
+//          </div>
+//       );
+//    }
+//}
 
 export default App;
