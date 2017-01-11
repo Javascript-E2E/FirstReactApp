@@ -8,10 +8,10 @@ var config = {
       filename: 'index.js',
    },
 	
-   devServer: {
-      inline: true,
-      port: 8080
-   },
+//    devServer: {
+//       inline: true,
+//       port: 8080
+//    },
 	
    module: {
       loaders: [
