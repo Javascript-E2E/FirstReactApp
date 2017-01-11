@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+//const webpack = require('webpack')
 
 var config = {
    entry: './main.js',
