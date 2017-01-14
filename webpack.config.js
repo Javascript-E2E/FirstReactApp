@@ -1,4 +1,4 @@
-//const webpack = require('webpack')
+const webpack = require('webpack')
 
 var config = {
    entry: './main.js',
@@ -25,7 +25,10 @@ var config = {
             }
          }
       ]
-   }
+   },
+   plugins:[
+       new webpack.optimize.UglifyJsPlugin()
+   ]
 }
 
 module.exports = config;
