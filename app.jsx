@@ -2,8 +2,8 @@ import React from 'react';
 
 class App extends React.Component {
 	
-	constructor() {
-      super();
+	constructor(props) {
+      super(props);
 		
       this.state = {
          data: {
@@ -29,25 +29,26 @@ class App extends React.Component {
       return (
          <div>
 			<h1>User Details</h1>
-			First Name:
-			<input type = "text" value = {this.state.data.firstName} />
-			Last Name:
-			<input type = "text" value = {this.state.data.lastName} />
-			<button onClick = {this.updateState}>GetNames</button>
+			<Content contentProp = {this.state.data} updateStateProp = {this.updateState}/>
          </div>
       );
    }
 }
 
-// class Content extends React.Component {
-
-//    render() {
-//       return (
-//          <div>
-
-//          </div>
-//       );
-//    }
-//}
+class Content extends React.Component {
+    render() {
+       return (
+          <div>
+			First Name:
+			<input type = "text" value = {this.props.contentProp.firstName} />
+			<br/><br/>
+			Last Name: 
+			<input type = "text" value = {this.props.contentProp.lastName} />
+			<br/><br/>
+			<button onClick = {this.props.updateStateProp}>GetNames</button>
+          </div>
+       );
+    }
+}
 
 export default App;
