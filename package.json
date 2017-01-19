@@ -4,7 +4,9 @@
   "description": "My React Application",
   "main": "index.js",
   "scripts": {
-   "start" : "webpack"   
+   "start" : "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+   "prod" : "NODE_ENV=production node server.js",
+   "postinstall": "webpack -p"   
   },
   "author": "Bakkiavathy Ezhumalai",
   "license": "ISC",
