@@ -6,3 +6,9 @@ opacity: 0.01;
 opacity: 1;
 transition: opacity 2000ms ease-in;
 }
+
+.text-color {
+opacity: 0.8;
+background-color: #C0C0C0;
+box-sizing: border-box;
+}

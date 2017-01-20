@@ -61,12 +61,12 @@ class Content extends React.Component {
 			<form>
 				<label>
 					First Name:
-					<input type = "text" onChange = {this.props.changeFirstNameProp}/>
+					<input type = "text" className="text-color" onChange = {this.props.changeFirstNameProp}/>
 				</label>
 				<br/><br/>
 				<label>
 					Last Name: 
-					<input type = "text" onChange = {this.props.changeLastNameProp} />
+					<input type = "text" className="text-color" onChange = {this.props.changeLastNameProp} />
 				</label>
 				<br/><br/>
 				<button onClick = {this.props.saveDetailsProp}>SAVE</button>
