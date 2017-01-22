@@ -47,7 +47,7 @@ class App extends React.Component {
 			transitionEnter = {false} transitionLeave = {false}>
 				<h1>User Details</h1>
 			</ReactCSSTransitionGroup>
-			<Content contentProp = {this.state.data} saveDetailsProp = {this.saveDetails} 
+			<Content saveDetailsProp = {this.saveDetails} 
 			changeFirstNameProp = {this.changeFirstName} changeLastNameProp = {this.changeLastName} />
          </div>
       );
