@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p"
+    "postinstall": "webpack -p",
+    "test": "jest"
   },
   "author": "Bakkiavathy Ezhumalai",
   "license": "ISC",
@@ -23,5 +24,8 @@
     "react-dom": "^15.4.2",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "devDependencies": {
+    "jest-cli": "^18.1.0"
   }
 }
