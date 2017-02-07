@@ -1,4 +1,5 @@
 import React from 'react';
+import Content from './templates/home/content.js';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
@@ -30,6 +31,7 @@ class App extends React.Component {
 	   var firstNameData = this.state.data;
 	   firstNameData.firstName = firstName;
        this.setState({data: firstNameData});
+	   console.log(firstNameData.firstName)
    }
    
    changeLastName(e) {
@@ -52,28 +54,6 @@ class App extends React.Component {
          </div>
       );
    }
-}
-
-class Content extends React.Component {
-    render() {
-       return (
-          <div>
-			<form>
-				<label>
-					First Name:
-					<input type = "text" className="text-color" onChange = {this.props.changeFirstNameProp}/>
-				</label>
-				<br/><br/>
-				<label>
-					Last Name: 
-					<input type = "text" className="text-color" onChange = {this.props.changeLastNameProp} />
-				</label>
-				<br/><br/>
-				<button onClick = {this.props.saveDetailsProp}>SAVE</button>
-			</form>
-          </div>
-       );
-    }
 }
 
 export default App;
