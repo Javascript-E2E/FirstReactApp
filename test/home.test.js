@@ -4,13 +4,13 @@ import {shallow} from 'enzyme';
 import TestUtils from 'react-addons-test-utils';
 import Content from '../src/app/templates/home/components/content';
 
-test('test case for App', function() {
-/*    it('testing initial React component with shallow', function() {
+/*describe('test case for App', function() {
+  it('testing initial React component with shallow', function() {
         const data = shallow(
             <app data="data:{firstName:'111',lastName:'22'}" />
         );
         expect(data.text()).toEqual('');
-    });*/
+    });
     it('testing initial React component', function() {
         const dataObject = {
             data:{firstName:'testFirstName',lastName:'testLastName'}
@@ -18,13 +18,24 @@ test('test case for App', function() {
         expect(dataObject.data.firstName).toEqual('testFirstName');
         expect(dataObject.data.lastName).toEqual('testLastName');
     });
-
-    it('check dom elements', function(){
-        const content = TestUtils.renderIntoDocument(
+});*/
+ 
+describe('test case for button text', function() {
+    let contentDom;
+    let content
+    beforeEach(() => {
+         content = TestUtils.renderIntoDocument(
         <Content saveDetailsProp = {this.saveDetails} 
  			changeFirstNameProp = {this.changeFirstName} changeLastNameProp = {this.changeLastName} />
         )
-        const contentDom = findDOMNode(content);
-        expect(contentDom.querySelector('button').textContent).toEqual('SAVE')
+        contentDom = ReactDOM.findDOMNode(content);
+    });
+
+    it('Test button Name', function(){
+       expect(contentDom.querySelector('button').textContent).toEqual('SAVE')
+    })
+
+    it('Test Presence of two input fields', function(){
+        expect(TestUtils.scryRenderedDOMComponentsWithTag(content,'input').length).toEqual(2)
     })
 });
