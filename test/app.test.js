@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
-import app from '../src/app/app';
+//import app from '../src/app/app';
 
 describe('test case for App', function() {
 /*    it('testing initial React component with shallow', function() {
