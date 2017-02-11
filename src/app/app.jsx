@@ -1,6 +1,7 @@
 import React from 'react';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var fetch = require('whatwg-fetch');
 
 class App extends React.Component {
 	
@@ -17,7 +18,6 @@ class App extends React.Component {
       this.saveDetails = this.saveDetails.bind(this);
 	  this.changeFirstName = this.changeFirstName.bind(this);
 	  this.changeLastName = this.changeLastName.bind(this);
-
    };
 
    saveDetails(e) {
@@ -26,6 +26,12 @@ class App extends React.Component {
    }
    
    changeFirstName(e) {
+
+	   fetch('http://localhost:5000/getAllContactDetails', {mode: 'no-cors'})
+		   .then(function(response){
+			   console.log(JSON.stringify(response));
+		   });
+
 	   var firstName = e.target.value;
 	   var firstNameData = this.state.data;
 	   firstNameData.firstName = firstName;
