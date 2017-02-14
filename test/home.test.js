@@ -3,23 +3,8 @@ import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import TestUtils from 'react-addons-test-utils';
 import Content from '../src/app/templates/home/components/content';
+jest.dontMock('../src/app/templates/home/components/content.js');
 
-/*describe('test case for App', function() {
-  it('testing initial React component with shallow', function() {
-        const data = shallow(
-            <app data="data:{firstName:'111',lastName:'22'}" />
-        );
-        expect(data.text()).toEqual('');
-    });
-    it('testing initial React component', function() {
-        const dataObject = {
-            data:{firstName:'testFirstName',lastName:'testLastName'}
-        };
-        expect(dataObject.data.firstName).toEqual('testFirstName');
-        expect(dataObject.data.lastName).toEqual('testLastName');
-    });
-});*/
- 
 describe('test case for button text', function() {
     let contentDom;
     let content
@@ -38,4 +23,13 @@ describe('test case for button text', function() {
     it('Test Presence of two input fields', function(){
         expect(TestUtils.scryRenderedDOMComponentsWithTag(content,'input').length).toEqual(2)
     })
+
+    it('Test the button click event',function() {
+        var testing = true;
+        var input = content.refs.saveButton;
+        TestUtils.Simulate.click(ReactDOM.findDOMNode(input));
+        expect(testing).toBe(true);
+    })
 });
+
+

@@ -14,7 +14,7 @@ import React from 'react';
 					<input type = "text" className="text-color" onChange = {this.props.changeLastNameProp} />
 				</label>
 				<br/><br/>
-				<button onClick = {this.props.saveDetailsProp}>SAVE</button>
+				<button ref="saveButton" onClick = {this.props.saveDetailsProp}>SAVE</button>
 			</form>
           </div>
        );
